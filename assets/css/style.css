@@ -8,16 +8,20 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Teko", sans-serif;
+  text-transform: uppercase;
   color: #000000;
   background-color: #fff;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 a {
   text-decoration: none;
   color: #db2d2c;
-  
+
 }
 
 a:hover {
@@ -25,13 +29,87 @@ a:hover {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Satisfy", sans-serif;
 }
 
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
+
+
+.salads {
+  background-color: #BE141D;
+  color: #fcb728 !important;
+}
+
+
+.salads * {
+  background-color: none;
+  color: #fff !important;
+}
+
+
+.sand {
+  background-color: none;
+  color: #BE141D !important;
+}
+
+.sand * {
+  color: #BE141D !important;
+  /* Ensures all elements inside .sand are red */
+}
+
+
+.highlight {
+  font-size: 40px;
+  background: url('https://s2.svgbox.net/pen-brushes.svg?ic=brush-10&color=db2d2c') no-repeat center;
+  background-size: cover;
+  /* Adjust this based on how you want the image to fit */
+  padding: 10px;
+  color: #fcb728;
+  /* Adjust text color for better contrast */
+  display: inline-block;
+  font-family: "Lilita One", sans-serif;
+  letter-spacing: 4px;
+}
+
+#b {
+  font-family: "Lilita One", sans-serif;
+  letter-spacing: 4px;
+}
+
+
+.highlightsalads {
+  font-size: 40px;
+  /* Adjust this based on how you want the image to fit */
+  padding: 10px;
+  color: #db2d2c;
+  /* Adjust text color for better contrast */
+  display: inline-block;
+  font-family: "Lilita One", sans-serif;
+  letter-spacing: 4px;
+}
+
+.highlightsand {
+  font-size: 35px;
+  /* Adjust this based on how you want the image to fit */
+  padding: 10px;
+  color: #BE141D !important;
+  /* Adjust text color for better contrast */
+  display: inline-block;
+  font-family: "Lilita One", sans-serif;
+  letter-spacing: 4px;
+}
+
+
+
+
 .back-to-top {
   position: fixed;
   visibility: hidden;
@@ -45,15 +123,18 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50px;
   transition: all 0.4s;
 }
+
 .back-to-top i {
   font-size: 28px;
   color: #fff;
   line-height: 0;
 }
+
 .back-to-top:hover {
   background: #db2d2c;
   color: #fff;
 }
+
 .back-to-top.active {
   visibility: visible;
   opacity: 1;
@@ -67,7 +148,7 @@ h1, h2, h3, h4, h5, h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 0;
 }
 
 .section-bg {
@@ -78,19 +159,23 @@ section {
   text-align: center;
   padding-bottom: 30px;
 }
+
 .section-title h2 {
   margin: 15px 0 0 0;
   font-size: 32px;
   font-weight: 700;
   color: #db2d2c;
 }
+
 .section-title h2 span {
   color: #db2d2c;
 }
+
 .section-title p {
   margin: 15px auto 0 auto;
   font-weight: 300;
 }
+
 @media (min-width: 1024px) {
   .section-title p {
     width: 50%;
@@ -109,6 +194,11 @@ section {
   text-align: center;
   border-radius: 50px;
 }
+
+.menu-item {
+  padding-right: 0;
+}
+
 .menu #menu-flters li {
   cursor: pointer;
   display: inline-block;
@@ -118,32 +208,38 @@ section {
   line-height: 1;
   color: #444444;
   margin: 0 3px 10px 3px;
-  transition: all ease-in-out 0.3s; 
+  transition: all ease-in-out 0.3s;
   background-color: #ffffff;
   border: 2px solid #fcb728;
   border-radius: 50px;
 }
-.menu #menu-flters li:hover, .menu #menu-flters li.filter-active {
+
+.menu #menu-flters li:hover,
+.menu #menu-flters li.filter-active {
   color: #fff;
   background: #db2d2c;
   border: 2px solid #db2d2c;
 }
+
 .menu #menu-flters li:last-child {
   margin-right: 0;
 }
+
 .menu .menu-content {
   margin-top: 30px;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding-right: 10px;
-  background-color: #fff;
+  padding-right: 3px;
+  background-color: none;
+  font-size: 1.5rem;
   position: relative;
   z-index: 3;
   font-weight: 700;
   color: #000000;
 }
+
 .menu .menu-content::after {
   position: absolute;
   left: 20px;
@@ -151,41 +247,83 @@ section {
   top: -4px;
   z-index: 1;
   color: #dad8d4;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Teko", "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .menu .menu-content span {
-  background-color: #fff;
+  background-color: none;
   position: relative;
   z-index: 3;
   padding: 0 10px;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: bolder;
 }
+
+/* More specific styles for the smaller text */
+.menu .menu-content span.small-text {
+  font-size: 0.8rem;
+  /* Smaller font size */
+  font-weight: normal;
+  /* Optional: Change weight if needed */
+  padding: 0;
+  /* Optional: Override padding if needed */
+  margin: auto;
+}
+
 .menu .menu-ingredients {
   font-style: italic;
   font-size: 14px;
+  padding-left: 6px;
   font-family: "Comic Neue", sans-serif;
-  color: #d09f74;
+  color: #000000;
+  word-wrap: break-word;
+  max-width: 90%;
 }
 
 .sub {
   font-style: italic;
-  font-size: 14px;
+  font-size: 16px;
   font-family: "Comic Neue", sans-serif;
   color: #000000;
+  
   text-align: center;
+  max-width: 250px;
+  margin: auto;
+}
+
+.sub span {
+  font-size: 24px; 
+  font-weight: bold;/* Adjust the size as needed */
+}
+
+.subburger {
+  font-style: italic;
+  font-size: 16px;
+  
+  font-family: "Comic Neue", sans-serif;
+  color: #fff;
+  text-align: center;
+  max-width: 250px;
+  margin: auto;
+  padding-top: 1rem;
+}
+
+.subburger span {
+  font-size: 24px; 
+  font-weight: bold;/* Adjust the size as needed */
 }
 
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #0b0b0b;
+  background: #BE141D;
   color: #fff;
   font-size: 14px;
   text-align: center;
   padding: 30px 0;
 }
+
 #footer h3 {
   font-size: 36px;
   font-weight: 700;
@@ -194,20 +332,23 @@ section {
   padding: 0;
   margin: 0 0 15px 0;
 }
+
 #footer p {
   font-size: 15;
   font-style: italic;
   padding: 0;
   margin: 0 0 40px 0;
 }
+
 #footer .social-links {
   margin: 0 0 40px 0;
 }
+
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #db2d2c;
-  color: #fff;
+  background: #BE141D;
+  color: #ffffff;
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -217,14 +358,373 @@ section {
   height: 36px;
   transition: 0.3s;
 }
+
 #footer .social-links a:hover {
-  background: #000000;
+  background: #BE141D;
 }
+
 #footer .copyright {
   margin: 0 0 5px 0;
 }
+
 #footer .credits {
   font-size: 13px;
 }
 
 
+
+
+
+
+
+.d-flex {
+  display: flex;
+  align-items: center;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+
+}
+
+
+.d-flexl {
+  display: flex;
+  align-items: center;
+  padding-left: 12px !important;
+  padding-right: 0px !important;
+
+}
+
+.image-container {
+  flex-shrink: 0;
+  margin-right: 15px;
+  overflow: visible;
+  /* Initially, the image is fully visible */
+}
+
+.responsive-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+.menu-items-container {
+  flex-grow: 1;
+}
+
+#Photospeciall {
+  padding-right: 0px;
+}
+
+
+
+/* Media query for screen widths under 420px */
+
+
+@media (max-width: 420px) {
+  #Photospecial {
+    font-size: 10px;
+    /* Smaller font size when width is below 420px */
+  }
+
+  #Photospeciall {
+    font-size: 16px;
+    /* Smaller font size when width is below 420px */
+  }
+
+  #Photospeciall span {
+    font-size: 16px;
+    /* Smaller font size when width is below 420px */
+  }
+
+}
+
+/* Media query for screen widths under 420px */
+@media (max-width: 357px) {
+  .responsive-image {
+    max-width: 180px;
+  }
+}
+
+/* Media query for screen widths under 420px */
+@media (max-width: 328px) {
+  .responsive-image {
+    max-width: 160px;
+  }
+}
+
+
+
+
+
+.content-container {
+  text-align: center;
+  max-width: 100%;
+}
+
+.content-container img {
+  width: 100%;
+  max-width: 300px;
+  /* Adjust as needed */
+  height: auto;
+  margin-bottom: 30px;
+}
+
+
+#Saladsimage{
+  width: 100%;
+  max-width: 300px;
+  /* Adjust as needed */
+  height: auto;
+  margin-top: 4.6rem;
+  margin-left: 0.25rem;
+  
+}
+
+
+
+.img-fluid {
+  width: 250px;
+  height: auto;
+  padding-right: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content-container img {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-container img {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 420px) {
+  .menu-content {
+    font-size: 12px;
+    /* Smaller text for small screens */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.burger-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  background-color: #BE141D;
+}
+
+.circle-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.burger-image {
+  position: absolute;
+  top: 60px;
+  /* Adjust as needed to center the image */
+  left: 25px;
+  /* Adjust as needed to center the image */
+  width: 150px;
+  height: 150px;
+  z-index: 2;
+}
+
+
+
+
+
+
+@media (min-width: 270px) and (max-width: 385px) {
+  #burgerimage {
+    font-size: 16px;
+  }
+
+  #burgerimagee {
+    font-size: 11px;
+  }
+
+  #burgerimage span {
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+
+
+
+.pizza-menu-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Lilita One", sans-serif;
+  background-color: #BE141D;
+  color: #fff;
+  padding-left: 0px;
+}
+
+.pizza-menu-table th,
+.pizza-menu-table td {
+  padding: 12px 15px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.pizza-menu-table th {
+  font-size: 20px;
+  color: #fff;
+}
+
+.pizza-menu-table td {
+  background-color: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+.pizza-menu-table .pizza-name {
+  font-size: 24px;
+  color: #fff;
+  background: url('https://s2.svgbox.net/pen-brushes.svg?ic=brush-10&color=db2d2c') no-repeat center;
+  background-size: cover;
+  padding: 10px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.pizza-menu-table .pizza-ingredients {
+  font-size: 16px;
+  color: #fff;
+}
+
+.pizza-menu-table tr {
+  border-bottom: none;
+}
+
+.pizza-menu-table td {
+  border: none;
+}
+
+.pizza-menu-table th {
+  border: none;
+}
+
+@media (max-width: 768px) {
+
+  .pizza-menu-table th,
+  .pizza-menu-table td {
+    padding: 10px 8px;
+  }
+
+  .pizza-menu-table th {
+    font-size: 18px;
+  }
+
+  .pizza-menu-table td {
+    font-size: 16px;
+  }
+
+  .pizza-menu-table .pizza-name {
+    font-size: 20px;
+  }
+
+  .pizza-menu-table .pizza-ingredients {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .pizza-menu-table th,
+  .pizza-menu-table td {
+    padding: 8px 6px;
+  }
+
+  .pizza-menu-table th {
+    font-size: 16px;
+  }
+
+  .pizza-menu-table td {
+    font-size: 14px;
+  }
+
+  .pizza-menu-table .pizza-name {
+    font-size: 18px;
+  }
+
+  .pizza-menu-table .pizza-ingredients {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+
+  .pizza-menu-table th,
+  .pizza-menu-table td {
+    padding: 4px 3px;
+  }
+
+  .pizza-menu-table th {
+    font-size: 12px;
+  }
+
+  .pizza-menu-table td {
+    font-size: 14px;
+  }
+
+  .pizza-menu-table .pizza-name {
+    font-size: 14px;
+  }
+
+  .pizza-menu-table .pizza-ingredients {
+    font-size: 9px;
+  }
+}
+
+.pizza-menu-table tr {
+  border-bottom: 1px dashed #fff;
+  /* Light grey line between rows */
+}
+
+.pizza-menu-table tr:last-child {
+  border-bottom: none;
+  /* Remove border for the last row */
+}
+
+.filter-pizza {
+  width: calc(100% + 24px);
+  /* 100% width + 12px on both sides */
+  margin-left: -12px;
+  margin-right: -12px;
+  background-color: #BE141D;
+}
+
+.burgerph {
+  background-color: #BE141D;
+}
+
+
+
+
+#sand .menu-item {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically if needed */
+}
