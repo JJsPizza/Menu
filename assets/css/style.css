@@ -3,7 +3,9 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-
+html , body {
+overflow-x:hiddenl;
+}
 body {
   font-family: "Teko", sans-serif;
   text-transform: uppercase;
